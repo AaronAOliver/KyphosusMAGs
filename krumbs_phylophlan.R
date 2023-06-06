@@ -1,21 +1,14 @@
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("ggtree")
-BiocManager::install("ggtreeExtra")
-devtools::install_github("YuLab-SMU/ggtree")
-
 # Section: load packages
 {
-library(treeio)
-library(ggtree)
-library(ggtreeExtra)
-library(ggstar)
-library(ggfittext)
-library(ggplot2)
-library(tidyverse)
-library(ggstance)
-library(mudata2)
-library(ggnewscale)
+list.of.packages = c('treeio', 'ggtree', 'ggtreeExtra', 'ggstar', 'ggfittext', 'ggplot2',
+                 'ggstance', 'ggnewscale', 'mudata2', 'tidyverse')
+
+# Install packages if missing
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+# Load packages
+sapply(list.of.packages, library, character.only = TRUE)
 }
 
 # Section: data frame preprocessing
@@ -151,39 +144,6 @@ figure = figure %<+% all_bins_tax +
     values=c(15),
     guide="none"
   ) +
-  theme(
-    legend.background=element_rect(fill=NA),
-    legend.title=element_text(size=7), 
-    legend.text=element_text(size=5.5),
-    legend.spacing.y = unit(0.02, "cm")
-  ) +
-  
-# add sulfate reduction ring
- new_scale_fill() +
-  geom_fruit(
-    data=subset(bin_sulfrd, !is.na(Sulfate.Reduction)),
-    geom=geom_star,
-    mapping=aes(y=MAG_id, fill=Sulfate.Reduction),
-    starshape = 13,
-    na.rm = TRUE,
-    size=1.5,
-    angle=15,
-    starstroke=0.001,
-    offset=0.1,
-    pwidth=0.1,
-    inherit.aes = FALSE,
-    grid.params = NULL)+
-  scale_fill_manual(
-    name="Sulfate Reduction",
-    values=c("green", "orange", "white"),
-    limits = c('Complete Pathway', 'Incomplete Pathway'),
-    guide=guide_legend(keywidth=1, keyheight=1, order=4,
-                       override.aes=list(
-                         starshape=c('Complete Pathway' = 13, 'Incomplete Pathway' = 13),
-                         size=2),             
-    ),
-    na.translate=FALSE,
-  )  +
   theme(
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=7), 
