@@ -1,15 +1,17 @@
-library(ggplot2)
-library("stringr") 
-library(tidyr)
-library(dplyr)
-library("RColorBrewer")
-library('tidyverse')
-library("ggbeeswarm")
-library("cowplot")
+# Get visualization packages
+if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
+if (!require('RColorBrewer')) install.packages('RColorBrewer'); library('RColorBrewer')
+if (!require('ggbeeswarm')) install.packages('ggbeeswarm'); library('ggbeeswarm')
+if (!require('cowplot')) install.packages('cowplot'); library('cowplot')
+if (!require('stringr')) install.packages('stringr'); library('stringr')
 
-#install.packages("stringr")                        # Install stringr package
+# Get data manipulation packages
+if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
+if (!require('tidyr')) install.packages('tidyr'); library('tidyr')
+if (!require('dplyr')) install.packages('dplyr'); library('dplyr')
 
 
+# Create a dataframe of all CAZyme and SulfAtlas annotations
 df = as.data.frame(read.csv("data/cazy_sulf_nr.tsv", sep = "\t"))
 df$annot = as.factor(df$annot)
 df$nr_id = as.numeric(df$nr_id)
@@ -17,6 +19,7 @@ df$self_id = as.numeric(df$self_id)
 df$sulf_id = as.numeric(df$sulf_id)
 df$dbCAN_id = as.numeric(df$dbCAN_id)
 
+# Get only the sulfatase annotations
 df_sulf = df[str_detect(df$annot, "S1_"), ]
 
 # tabulate the id variable
@@ -26,7 +29,7 @@ tab <- table(df_sulf$annot)
 idx <- names(tab)[tab >= 20]
 idx = c("S1_13", "S1_72", "S1_19", "S1_8", "S1_24", "S1_4", "S1_11", "S1_20", "S1_15", "S1_16", "S1_17", "S1_28", "S1_25", "S1_14", "S1_27")
 
-# Only look at the data that we care aboutd
+# Only look at the data that we care about
 df_sulf2 = df_sulf[df_sulf$annot %in% idx,]
 
 df_sulf_pivot = df_sulf2 %>%
@@ -34,6 +37,8 @@ df_sulf_pivot = df_sulf2 %>%
 df_sulf_pivot$blast =  factor(df_sulf_pivot$blast, levels = c("self_id", "nr_id", "sulf_id"))
 df_sulf_pivot$annot = factor(df_sulf_pivot$annot,
                             idx)
+
+# Get counts of how many genes in each section
 sulf_summary = df_sulf_pivot %>% group_by(annot) %>% tally()
 sulf_summary$n = sulf_summary$n / 3
 sulf_summary$blast = "nr_id"
@@ -60,8 +65,7 @@ cazy_summary = df_cazy_pivot %>% group_by(annot) %>% tally()
 cazy_summary$n = cazy_summary$n / 3
 cazy_summary$blast = "nr_id"
 
-#p + geom_jitter(height = 0, width = 0.25) #+ geom_violin(width = 1.7) 
-#p + geom_violin(width = 1.7) 
+
 svg("cazy_boxplot.svg", width = 8, height = 4)
 p <- ggplot(df_cazy_pivot, aes(annot, id, fill=blast))
 p + geom_boxplot() + theme_bw() + scale_fill_discrete(labels=c('Kyphosid Gut', 'Genbank nr', 'CAZy db')) + guides(fill= guide_legend(title = "Database"))  +  xlab("CAZyme Class") + 

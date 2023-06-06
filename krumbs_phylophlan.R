@@ -1,8 +1,8 @@
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install("ggtree")
-BiocManager::install("ggtreeExtra")
-devtools::install_github("YuLab-SMU/ggtree")
+#BiocManager::install("ggtree")
+#BiocManager::install("ggtreeExtra")
+#devtools::install_github("YuLab-SMU/ggtree")
 
 {
 library(treeio)
@@ -187,10 +187,15 @@ p6 = p5 + new_scale_fill() +
              mapping=aes(y=bins, x = dummy, fill=Source),pwidth = 0.05
              ) + scale_fill_manual(name = "MAG Source", values = c('Fish Gut' = "#4472C4", 'Bioreactor' = "#A6A6A6", "Seaweed Only Bioreactor" = "pink")) +     guides(fill=guide_legend(ncol=2, order=3))
 #+ guides(fill=guide_legend(ncol=3, byrow=TRUE))
+svg(paste(taxa,"raxml_no_scfas.svg", sep = "_"), width = 11, height = 7)
+
 p6
 
+dev.off()
+#######
 
-#svg(paste(taxa,"raxml_scfas.svg", sep = "_"), width = 12, height = 11)
+
+svg(paste(taxa,"raxml_scfas.svg", sep = "_"), width = 12, height = 11)
 
 bin_scfa = data.frame(read.csv("data/bin_scfa.tab", sep = "\t"))
 bin_scfa = bin_scfa %>% 
@@ -235,6 +240,8 @@ p7 = p6 + new_scale_fill() +
 
 p7
 dev.off()
+#########
+
 
 svg(paste(taxa,"raxml_scfas.svg", sep = "_"), width = 8, height = 8)
 

@@ -1,212 +1,212 @@
-MAG_id	Propanoate	Butyrate	Acetate	point
-F5GI_2_bin.1	No marker gene	No marker gene	Acetate	circle
-F5GI_2_bin.2	No marker gene	No marker gene	Acetate	circle
-F5GI_2_bin.3	Propanoate	Butyrate	Acetate	circle
-F5GI_3_bin.1	No marker gene	Butyrate	Acetate	circle
-F5GI_3_bin.2	Propanoate	Butyrate	Acetate	circle
-F5GI_3_bin.3	No marker gene	Butyrate	No marker gene	circle
-F5GI_3_bin.4	No marker gene	No marker gene	Acetate	circle
-F5GI_3_bin.5	No marker gene	No marker gene	Acetate	circle
+MAG_id	Acetate	Propanoate	Butyrate	point
+F5GI_2_bin.1	Acetate	No marker gene	No marker gene	circle
+F5GI_2_bin.2	Acetate	No marker gene	No marker gene	circle
+F5GI_2_bin.3	Acetate	No marker gene	No marker gene	circle
+F5GI_3_bin.1	No marker gene	Propanoate	No marker gene	circle
+F5GI_3_bin.2	No marker gene	No marker gene	No marker gene	circle
+F5GI_3_bin.3	Acetate	No marker gene	No marker gene	circle
+F5GI_3_bin.4	Acetate	No marker gene	No marker gene	circle
+F5GI_3_bin.5	Acetate	No marker gene	No marker gene	circle
 F5GI_3_bin.6	No marker gene	No marker gene	No marker gene	circle
-F5GI_3_bin.7	No marker gene	No marker gene	Acetate	circle
-F5HG_2_bin.1	Propanoate	Butyrate	Acetate	circle
-F5HG_2_bin.2	Propanoate	No marker gene	Acetate	circle
-F5HG_2_bin.3	No marker gene	No marker gene	Acetate	circle
-F5HG_2_bin.4	No marker gene	No marker gene	Acetate	circle
-F5HG_2_bin.5	No marker gene	No marker gene	Acetate	circle
-F5HG_2_bin.6	No marker gene	No marker gene	No marker gene	circle
-F5HG_2_bin.7	No marker gene	No marker gene	Acetate	circle
-F5HG_2_bin.8	No marker gene	No marker gene	Acetate	circle
-F5HG_2_bin.9	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.1	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.10	Propanoate	No marker gene	Acetate	circle
+F5GI_3_bin.7	Acetate	No marker gene	No marker gene	circle
+F5HG_2_bin.1	Acetate	No marker gene	No marker gene	circle
+F5HG_2_bin.2	No marker gene	No marker gene	No marker gene	circle
+F5HG_2_bin.3	Acetate	Propanoate	No marker gene	circle
+F5HG_2_bin.4	No marker gene	No marker gene	No marker gene	circle
+F5HG_2_bin.5	Acetate	No marker gene	No marker gene	circle
+F5HG_2_bin.6	Acetate	Propanoate	No marker gene	circle
+F5HG_2_bin.7	Acetate	No marker gene	No marker gene	circle
+F5HG_2_bin.8	No marker gene	No marker gene	No marker gene	circle
+F5HG_2_bin.9	Acetate	No marker gene	No marker gene	circle
+F5HG_3_bin.1	Acetate	No marker gene	No marker gene	circle
+F5HG_3_bin.10	No marker gene	No marker gene	No marker gene	circle
 F5HG_3_bin.11	No marker gene	No marker gene	No marker gene	circle
-F5HG_3_bin.12	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.2	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.3	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.4	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.5	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.6	Propanoate	No marker gene	Acetate	circle
-F5HG_3_bin.7	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.8	No marker gene	No marker gene	Acetate	circle
-F5HG_3_bin.9	No marker gene	No marker gene	Acetate	circle
-F6GI_3_bin.1	No marker gene	No marker gene	Acetate	circle
-F6GI_3_bin.2	No marker gene	No marker gene	No marker gene	circle
-F6GI_3_bin.3	No marker gene	No marker gene	Acetate	circle
+F5HG_3_bin.12	Acetate	No marker gene	No marker gene	circle
+F5HG_3_bin.2	No marker gene	No marker gene	No marker gene	circle
+F5HG_3_bin.3	Acetate	Propanoate	No marker gene	circle
+F5HG_3_bin.4	Acetate	Propanoate	No marker gene	circle
+F5HG_3_bin.5	No marker gene	No marker gene	Butyrate	circle
+F5HG_3_bin.6	No marker gene	No marker gene	No marker gene	circle
+F5HG_3_bin.7	Acetate	No marker gene	No marker gene	circle
+F5HG_3_bin.8	No marker gene	Propanoate	No marker gene	circle
+F5HG_3_bin.9	No marker gene	Propanoate	No marker gene	circle
+F6GI_3_bin.1	Acetate	No marker gene	No marker gene	circle
+F6GI_3_bin.2	Acetate	Propanoate	No marker gene	circle
+F6GI_3_bin.3	Acetate	No marker gene	No marker gene	circle
 F6GI_3_bin.4	No marker gene	No marker gene	No marker gene	circle
-F6GI_4_bin.1	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.10	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.11	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.12	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.2	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.3	Propanoate	No marker gene	Acetate	circle
-F6GI_4_bin.4	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.5	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.6	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.7	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.8	No marker gene	No marker gene	Acetate	circle
-F6GI_4_bin.9	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.1	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.10	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.11	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.12	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.13	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.14	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.15	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.16	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.17	No marker gene	No marker gene	No marker gene	circle
-F6HG_2_bin.2	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.3	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.4	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.5	No marker gene	Butyrate	Acetate	circle
-F6HG_2_bin.6	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.7	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.8	No marker gene	No marker gene	Acetate	circle
-F6HG_2_bin.9	No marker gene	Butyrate	Acetate	circle
-F6HG_3_bin.1	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.10	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.11	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.12	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.13	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.14	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.15	No marker gene	Butyrate	Acetate	circle
-F6HG_3_bin.16	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.17	No marker gene	No marker gene	No marker gene	circle
-F6HG_3_bin.18	No marker gene	Butyrate	No marker gene	circle
-F6HG_3_bin.19	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.2	No marker gene	Butyrate	Acetate	circle
-F6HG_3_bin.20	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.21	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.22	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.23	No marker gene	No marker gene	No marker gene	circle
-F6HG_3_bin.24	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.25	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.3	No marker gene	Butyrate	Acetate	circle
-F6HG_3_bin.4	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.5	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.6	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.7	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.8	No marker gene	No marker gene	Acetate	circle
-F6HG_3_bin.9	No marker gene	No marker gene	Acetate	circle
+F6GI_4_bin.1	No marker gene	Propanoate	No marker gene	circle
+F6GI_4_bin.10	No marker gene	No marker gene	No marker gene	circle
+F6GI_4_bin.11	Acetate	Propanoate	No marker gene	circle
+F6GI_4_bin.12	No marker gene	No marker gene	No marker gene	circle
+F6GI_4_bin.2	Acetate	No marker gene	No marker gene	circle
+F6GI_4_bin.3	Acetate	No marker gene	No marker gene	circle
+F6GI_4_bin.4	Acetate	Propanoate	No marker gene	circle
+F6GI_4_bin.5	Acetate	No marker gene	No marker gene	circle
+F6GI_4_bin.6	Acetate	No marker gene	No marker gene	circle
+F6GI_4_bin.7	Acetate	No marker gene	No marker gene	circle
+F6GI_4_bin.8	No marker gene	Propanoate	No marker gene	circle
+F6GI_4_bin.9	No marker gene	No marker gene	No marker gene	circle
+F6HG_2_bin.1	Acetate	No marker gene	No marker gene	circle
+F6HG_2_bin.10	Acetate	No marker gene	No marker gene	circle
+F6HG_2_bin.11	No marker gene	No marker gene	No marker gene	circle
+F6HG_2_bin.12	Acetate	Propanoate	No marker gene	circle
+F6HG_2_bin.13	Acetate	Propanoate	No marker gene	circle
+F6HG_2_bin.14	Acetate	Propanoate	No marker gene	circle
+F6HG_2_bin.15	Acetate	Propanoate	No marker gene	circle
+F6HG_2_bin.16	Acetate	No marker gene	No marker gene	circle
+F6HG_2_bin.17	Acetate	No marker gene	No marker gene	circle
+F6HG_2_bin.2	No marker gene	No marker gene	No marker gene	circle
+F6HG_2_bin.3	Acetate	No marker gene	No marker gene	circle
+F6HG_2_bin.4	Acetate	Propanoate	No marker gene	circle
+F6HG_2_bin.5	No marker gene	Propanoate	Butyrate	circle
+F6HG_2_bin.6	No marker gene	No marker gene	No marker gene	circle
+F6HG_2_bin.7	Acetate	No marker gene	No marker gene	circle
+F6HG_2_bin.8	No marker gene	No marker gene	No marker gene	circle
+F6HG_2_bin.9	Acetate	Propanoate	No marker gene	circle
+F6HG_3_bin.1	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.10	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.11	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.12	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.13	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.14	Acetate	Propanoate	No marker gene	circle
+F6HG_3_bin.15	Acetate	Propanoate	No marker gene	circle
+F6HG_3_bin.16	No marker gene	No marker gene	No marker gene	circle
+F6HG_3_bin.17	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.18	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.19	No marker gene	No marker gene	No marker gene	circle
+F6HG_3_bin.2	No marker gene	Propanoate	Butyrate	circle
+F6HG_3_bin.20	No marker gene	No marker gene	No marker gene	circle
+F6HG_3_bin.21	No marker gene	No marker gene	No marker gene	circle
+F6HG_3_bin.22	Acetate	Propanoate	No marker gene	circle
+F6HG_3_bin.23	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.24	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.25	Acetate	Propanoate	No marker gene	circle
+F6HG_3_bin.3	Acetate	Propanoate	No marker gene	circle
+F6HG_3_bin.4	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.5	No marker gene	No marker gene	No marker gene	circle
+F6HG_3_bin.6	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.7	Acetate	No marker gene	No marker gene	circle
+F6HG_3_bin.8	No marker gene	No marker gene	No marker gene	circle
+F6HG_3_bin.9	Acetate	Propanoate	No marker gene	circle
 F7GI_2_bin.1	No marker gene	No marker gene	No marker gene	circle
 F7GI_3_bin.1	No marker gene	No marker gene	No marker gene	circle
 F7GI_3_bin.10	No marker gene	No marker gene	No marker gene	circle
 F7GI_3_bin.2	No marker gene	No marker gene	No marker gene	circle
-F7GI_3_bin.3	No marker gene	No marker gene	No marker gene	circle
+F7GI_3_bin.3	Acetate	No marker gene	No marker gene	circle
 F7GI_3_bin.4	No marker gene	No marker gene	No marker gene	circle
 F7GI_3_bin.5	No marker gene	No marker gene	No marker gene	circle
 F7GI_3_bin.6	No marker gene	No marker gene	No marker gene	circle
 F7GI_3_bin.7	No marker gene	No marker gene	No marker gene	circle
 F7GI_3_bin.8	No marker gene	No marker gene	No marker gene	circle
 F7GI_3_bin.9	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.1	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.10	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.11	No marker gene	No marker gene	No marker gene	circle
+F7HG_2_bin.1	No marker gene	Propanoate	No marker gene	circle
+F7HG_2_bin.10	No marker gene	Propanoate	No marker gene	circle
+F7HG_2_bin.11	Acetate	No marker gene	No marker gene	circle
 F7HG_2_bin.12	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.13	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.14	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.15	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.16	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.17	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.18	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.2	No marker gene	No marker gene	No marker gene	circle
+F7HG_2_bin.13	Acetate	Propanoate	No marker gene	circle
+F7HG_2_bin.14	No marker gene	Propanoate	No marker gene	circle
+F7HG_2_bin.15	Acetate	No marker gene	No marker gene	circle
+F7HG_2_bin.16	Acetate	No marker gene	No marker gene	circle
+F7HG_2_bin.17	Acetate	No marker gene	No marker gene	circle
+F7HG_2_bin.18	Acetate	No marker gene	No marker gene	circle
+F7HG_2_bin.2	Acetate	No marker gene	No marker gene	circle
 F7HG_2_bin.3	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.4	No marker gene	No marker gene	No marker gene	circle
-F7HG_2_bin.5	No marker gene	No marker gene	No marker gene	circle
+F7HG_2_bin.4	Acetate	Propanoate	No marker gene	circle
+F7HG_2_bin.5	Acetate	No marker gene	No marker gene	circle
 F7HG_2_bin.6	No marker gene	No marker gene	No marker gene	circle
 F7HG_2_bin.7	No marker gene	No marker gene	No marker gene	circle
 F7HG_2_bin.8	No marker gene	No marker gene	No marker gene	circle
 F7HG_2_bin.9	No marker gene	No marker gene	No marker gene	circle
-F7HG_3_bin.1	No marker gene	No marker gene	No marker gene	circle
+F7HG_3_bin.1	Acetate	No marker gene	No marker gene	circle
 F7HG_3_bin.2	No marker gene	No marker gene	No marker gene	circle
 F7HG_3_bin.3	No marker gene	No marker gene	No marker gene	circle
-F7HG_3_bin.5	No marker gene	No marker gene	No marker gene	circle
+F7HG_3_bin.5	Acetate	No marker gene	No marker gene	circle
 F7HG_3_bin.6	No marker gene	No marker gene	No marker gene	circle
-F7HG_3_bin.7	No marker gene	No marker gene	No marker gene	circle
+F7HG_3_bin.7	Acetate	Propanoate	No marker gene	circle
 F7HG_3_bin.8	No marker gene	No marker gene	No marker gene	circle
-F8GI_2_bin.1	No marker gene	No marker gene	Acetate	circle
-F8HG_2_bin.1	No marker gene	No marker gene	Acetate	circle
-F8HG_2_bin.2	No marker gene	No marker gene	Acetate	circle
-F8HG_2_bin.3	No marker gene	No marker gene	No marker gene	circle
-F8HG_2_bin.4	No marker gene	No marker gene	Acetate	circle
-F8HG_2_bin.6	No marker gene	No marker gene	Acetate	circle
-F8HG_2_bin.7	No marker gene	No marker gene	Acetate	circle
-R1_12_bin.1	No marker gene	No marker gene	Acetate	circle
-R1_12_bin.2	No marker gene	No marker gene	Acetate	circle
+F8GI_2_bin.1	No marker gene	No marker gene	No marker gene	circle
+F8GI_3_bin.1	Acetate	No marker gene	No marker gene	circle
+F8GI_3_bin.2	No marker gene	No marker gene	No marker gene	circle
+F8HG_2_bin.1	Acetate	Propanoate	No marker gene	circle
+F8HG_2_bin.2	No marker gene	No marker gene	No marker gene	circle
+F8HG_2_bin.3	Acetate	No marker gene	No marker gene	circle
+F8HG_2_bin.4	No marker gene	Propanoate	No marker gene	circle
+F8HG_2_bin.6	No marker gene	No marker gene	No marker gene	circle
+F8HG_2_bin.7	No marker gene	No marker gene	No marker gene	circle
+F8HG_3_bin.1	No marker gene	No marker gene	No marker gene	circle
+F8HG_3_bin.2	No marker gene	Propanoate	Butyrate	circle
+F8HG_3_bin.3	No marker gene	No marker gene	No marker gene	circle
+R1_12_bin.1	Acetate	No marker gene	No marker gene	circle
+R1_12_bin.2	Acetate	No marker gene	No marker gene	circle
 R1_12_bin.3	No marker gene	No marker gene	No marker gene	circle
-R1_12_bin.4	No marker gene	Butyrate	No marker gene	circle
-R1_12_bin.5	No marker gene	No marker gene	Acetate	circle
-R1_12_bin.6	No marker gene	No marker gene	Acetate	circle
-R1_25_bin.1	No marker gene	No marker gene	Acetate	circle
-R1_25_bin.2	No marker gene	No marker gene	Acetate	circle
-R1_25_bin.3	No marker gene	Butyrate	Acetate	circle
-R1_25_bin.4	No marker gene	No marker gene	Acetate	circle
-R1_25_bin.5	No marker gene	No marker gene	Acetate	circle
-R1_25_bin.6	No marker gene	No marker gene	Acetate	circle
-R1_25_bin.7	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.1	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.10	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.11	Propanoate	No marker gene	No marker gene	circle
+R1_12_bin.4	Acetate	No marker gene	No marker gene	circle
+R1_12_bin.5	No marker gene	No marker gene	No marker gene	circle
+R1_12_bin.6	Acetate	No marker gene	No marker gene	circle
+R1_25_bin.1	Acetate	No marker gene	No marker gene	circle
+R1_25_bin.2	Acetate	No marker gene	No marker gene	circle
+R1_25_bin.3	Acetate	No marker gene	Butyrate	circle
+R1_25_bin.4	Acetate	No marker gene	No marker gene	circle
+R1_25_bin.5	Acetate	No marker gene	No marker gene	circle
+R1_25_bin.6	Acetate	Propanoate	No marker gene	circle
+R1_25_bin.7	No marker gene	No marker gene	No marker gene	circle
+R1_28_bin.1	Acetate	No marker gene	No marker gene	circle
+R1_28_bin.10	Acetate	No marker gene	No marker gene	circle
+R1_28_bin.11	Acetate	No marker gene	No marker gene	circle
 R1_28_bin.12	No marker gene	No marker gene	No marker gene	circle
-R1_28_bin.13	Propanoate	No marker gene	Acetate	circle
-R1_28_bin.14	No marker gene	No marker gene	Acetate	circle
+R1_28_bin.13	Acetate	No marker gene	No marker gene	circle
+R1_28_bin.14	No marker gene	No marker gene	No marker gene	circle
 R1_28_bin.15	No marker gene	No marker gene	No marker gene	circle
-R1_28_bin.16	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.17	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.18	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.2	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.3	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.4	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.5	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.6	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.7	No marker gene	No marker gene	Acetate	circle
-R1_28_bin.8	Propanoate	No marker gene	Acetate	circle
+R1_28_bin.16	No marker gene	No marker gene	No marker gene	circle
+R1_28_bin.17	Acetate	No marker gene	No marker gene	circle
+R1_28_bin.18	No marker gene	No marker gene	No marker gene	circle
+R1_28_bin.2	Acetate	No marker gene	No marker gene	circle
+R1_28_bin.3	Acetate	Propanoate	No marker gene	circle
+R1_28_bin.4	No marker gene	Propanoate	No marker gene	circle
+R1_28_bin.5	Acetate	Propanoate	No marker gene	circle
+R1_28_bin.6	Acetate	No marker gene	No marker gene	circle
+R1_28_bin.7	Acetate	Propanoate	No marker gene	circle
+R1_28_bin.8	No marker gene	No marker gene	No marker gene	circle
 R1_28_bin.9	No marker gene	No marker gene	No marker gene	circle
-R1_29_bin.1	Propanoate	No marker gene	Acetate	circle
-R1_29_bin.2	No marker gene	No marker gene	Acetate	circle
-R1_29_bin.3	Propanoate	No marker gene	Acetate	circle
-R1_29_bin.4	No marker gene	Butyrate	No marker gene	circle
-R1_29_bin.5	Propanoate	No marker gene	Acetate	circle
-R1_29_bin.6	Propanoate	No marker gene	No marker gene	circle
-R1_29_bin.7	No marker gene	No marker gene	Acetate	circle
-R1_38_bin.1	Propanoate	No marker gene	Acetate	circle
-R1_43_bin.1	Propanoate	No marker gene	Acetate	circle
-R1_43_bin.2	Propanoate	Butyrate	Acetate	circle
-R1_43_bin.3	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.1	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.10	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.11	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.12	Propanoate	Butyrate	Acetate	circle
-R1_6_bin.13	Propanoate	No marker gene	Acetate	circle
-R1_6_bin.14	Propanoate	Butyrate	Acetate	circle
-R1_6_bin.15	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.16	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.2	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.3	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.4	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.5	No marker gene	Butyrate	Acetate	circle
-R1_6_bin.6	No marker gene	Butyrate	Acetate	circle
-R1_6_bin.7	No marker gene	No marker gene	Acetate	circle
-R1_6_bin.8	No marker gene	No marker gene	No marker gene	circle
-R1_6_bin.9	No marker gene	No marker gene	Acetate	circle
-R2_24_bin.1	Propanoate	Butyrate	Acetate	circle
-R2_24_bin.2	Propanoate	No marker gene	Acetate	circle
-R2_24_bin.3	No marker gene	No marker gene	Acetate	circle
-R2_24_bin.4	Propanoate	No marker gene	Acetate	circle
-R2_24_bin.5	Propanoate	No marker gene	Acetate	circle
-R2_26_bin.1	Propanoate	No marker gene	Acetate	circle
-R2_26_bin.2	No marker gene	No marker gene	Acetate	circle
-R2_26_bin.3	No marker gene	Butyrate	Acetate	circle
-R2_26_bin.4	Propanoate	No marker gene	Acetate	circle
-R2_26_bin.5	Propanoate	No marker gene	Acetate	circle
-R2_26_bin.6	Propanoate	No marker gene	Acetate	circle
-R2_26_bin.7	No marker gene	No marker gene	No marker gene	circle
-R2_8_bin.1	No marker gene	No marker gene	Acetate	circle
-R2_8_bin.2	Propanoate	Butyrate	Acetate	circle
+R1_29_bin.1	Acetate	No marker gene	No marker gene	circle
+R1_29_bin.2	Acetate	No marker gene	No marker gene	circle
+R1_29_bin.3	No marker gene	No marker gene	No marker gene	circle
+R1_29_bin.4	Acetate	No marker gene	No marker gene	circle
+R1_29_bin.5	Acetate	No marker gene	No marker gene	circle
+R1_29_bin.6	No marker gene	No marker gene	No marker gene	circle
+R1_29_bin.7	Acetate	No marker gene	No marker gene	circle
+R1_38_bin.1	Acetate	No marker gene	No marker gene	circle
+R1_43_bin.1	Acetate	No marker gene	No marker gene	circle
+R1_43_bin.2	Acetate	No marker gene	No marker gene	circle
+R1_43_bin.3	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.1	No marker gene	Propanoate	No marker gene	circle
+R1_6_bin.10	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.11	No marker gene	No marker gene	No marker gene	circle
+R1_6_bin.12	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.13	No marker gene	No marker gene	No marker gene	circle
+R1_6_bin.14	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.15	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.16	Acetate	Propanoate	No marker gene	circle
+R1_6_bin.2	No marker gene	Propanoate	No marker gene	circle
+R1_6_bin.3	No marker gene	No marker gene	No marker gene	circle
+R1_6_bin.4	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.5	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.6	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.7	Acetate	No marker gene	No marker gene	circle
+R1_6_bin.8	Acetate	Propanoate	No marker gene	circle
+R1_6_bin.9	Acetate	Propanoate	No marker gene	circle
+R2_24_bin.1	Acetate	Propanoate	No marker gene	circle
+R2_24_bin.2	Acetate	Propanoate	No marker gene	circle
+R2_24_bin.3	Acetate	Propanoate	No marker gene	circle
+R2_24_bin.4	Acetate	No marker gene	No marker gene	circle
+R2_24_bin.5	No marker gene	No marker gene	No marker gene	circle
+R2_26_bin.1	No marker gene	No marker gene	No marker gene	circle
+R2_26_bin.2	Acetate	No marker gene	No marker gene	circle
+R2_26_bin.3	Acetate	No marker gene	No marker gene	circle
+R2_26_bin.4	Acetate	No marker gene	No marker gene	circle
+R2_26_bin.5	Acetate	No marker gene	No marker gene	circle
+R2_26_bin.6	Acetate	Propanoate	Butyrate	circle
+R2_26_bin.7	Acetate	Propanoate	No marker gene	circle
+R2_8_bin.1	Acetate	No marker gene	No marker gene	circle
+R2_8_bin.2	Acetate	Propanoate	No marker gene	circle
 R2_8_bin.3	No marker gene	No marker gene	No marker gene	circle
-R2_8_bin.4	Propanoate	No marker gene	Acetate	circle
-F8GI_3_bin.1	Propanoate	No marker gene	Acetate	circle
-F8GI_3_bin.2	No marker gene	No marker gene	Acetate	circle
-F8HG_3_bin.1	No marker gene	No marker gene	Acetate	circle
-F8HG_3_bin.2	No marker gene	No marker gene	Acetate	circle
-F8HG_3_bin.3	No marker gene	No marker gene	Acetate	circle
+R2_8_bin.4	Acetate	Propanoate	No marker gene	circle
