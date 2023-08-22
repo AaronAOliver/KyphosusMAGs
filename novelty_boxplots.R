@@ -1,14 +1,15 @@
-# Get visualization packages
-if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
-if (!require('RColorBrewer')) install.packages('RColorBrewer'); library('RColorBrewer')
-if (!require('ggbeeswarm')) install.packages('ggbeeswarm'); library('ggbeeswarm')
-if (!require('cowplot')) install.packages('cowplot'); library('cowplot')
-if (!require('stringr')) install.packages('stringr'); library('stringr')
-
-# Get data manipulation packages
-if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
-if (!require('tidyr')) install.packages('tidyr'); library('tidyr')
-if (!require('dplyr')) install.packages('dplyr'); library('dplyr')
+# Section: load packages
+{
+  list.of.packages = c('RColorBrewer', 'ggplot2', 'ggbeeswarm', 'cowplot', 'stringr',
+                       'dplyr', 'tidyr', 'tidyverse')
+  
+  # Install packages if missing
+  new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+  if(length(new.packages)) install.packages(new.packages)
+  
+  # Load packages
+  sapply(list.of.packages, library, character.only = TRUE)
+}
 
 
 # Create a dataframe of all CAZyme and SulfAtlas annotations
@@ -44,7 +45,7 @@ sulf_summary$n = sulf_summary$n / 3
 sulf_summary$blast = "nr_id"
 
 
-svg("sulf_boxplot.svg",width = 8, height = 4)
+svg("figures/sulf_boxplot.svg",width = 8, height = 4)
 p <- ggplot(df_sulf_pivot, aes(annot, id, fill=blast))
 p + geom_boxplot() + theme_bw() + scale_fill_discrete(labels=c('Kyphosid Gut', 'Genbank nr', 'SulfAtlas')) + guides(fill= guide_legend(title = "Database"))  +  xlab("Sulfatase Subfamily") + 
   ylab("Percent Identity") + theme(axis.text.x = element_text(size = 11, color = "black", angle = 90, vjust = 0.5, hjust=1), axis.text.y = element_text(size = 11, color = "black")) + ylim(20, 105) + 
@@ -52,6 +53,7 @@ p + geom_boxplot() + theme_bw() + scale_fill_discrete(labels=c('Kyphosid Gut', '
             aes(annot, Inf, label = n), vjust = 1.5)
 dev.off()
 
+##### CAZymes
 valid_cazy = c("GH16_16", "GH86", "GH16_11", "GH10", "GH82","GH50", "GH117", "GH150", "GH16_12", "PL40", "PL6", "PL38", "GH29", "PL8", "GH95")
 cazy_colors = c("red","red","red","red","red","red","red","red","red","red","brown","brown","brown","brown","brown","brown","brown")
 df_cazy = df[df$annot %in% valid_cazy,]
@@ -66,7 +68,7 @@ cazy_summary$n = cazy_summary$n / 3
 cazy_summary$blast = "nr_id"
 
 
-svg("cazy_boxplot.svg", width = 8, height = 4)
+svg("figures/cazy_boxplot.svg", width = 8, height = 4)
 p <- ggplot(df_cazy_pivot, aes(annot, id, fill=blast))
 p + geom_boxplot() + theme_bw() + scale_fill_discrete(labels=c('Kyphosid Gut', 'Genbank nr', 'CAZy db')) + guides(fill= guide_legend(title = "Database"))  +  xlab("CAZyme Class") + 
   ylab("Percent Identity")+ theme(axis.text.x = element_text(size = 11, color = cazy_colors,angle = 90, vjust = 0.5, hjust=1), axis.text.y = element_text(size = 11, color = "black")) + ylim(20, 105) +

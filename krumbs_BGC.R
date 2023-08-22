@@ -7,6 +7,18 @@ library('tidyverse')
 library("ggbeeswarm")
 library("cowplot")
 
+# Section: load packages
+{
+  list.of.packages = c( 'ggplot2', 'cowplot', 'ggbeeswarm', 'tidyverse', 'RColorBrewer', 'tidyr', 'dplyr', 'stringr')
+  
+  # Install packages if missing
+  new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+  if(length(new.packages)) install.packages(new.packages)
+  
+  # Load packages
+  sapply(list.of.packages, library, character.only = TRUE)
+}
+
 
 bigscape_classes <- c("RiPPs", 
                       "NRPS",
@@ -80,9 +92,10 @@ get_random_color <- Vectorize(function(class){
 
 
 
-svg("bgc_barplot.svg", width = 10, height = 5)
+svg("figures/bgc_barplot.svg", width = 10, height = 5)
 barplot
 dev.off()
+
 #####
 
 {
@@ -143,7 +156,7 @@ dev.off()
     ylab("Number of BGCs") + xlab("")
 }
 
-svg("bgc_tax_barplot.svg", width = 10, height = 5)
+svg("figures/bgc_tax_barplot.svg", width = 10, height = 5)
 barplot_tax
 dev.off()
 
@@ -160,7 +173,7 @@ barplot_violin = ggplot(bgc_violin_df, aes(x=class, y=distance)) +
   ylab("Distance to Nearest GCF") + xlab("") + theme(axis.text=element_text(size=12, colour = "black"))
 barplot_violin$labels$fill <- "BGC Quality"
 
-svg("bgc_violin_barplot.svg", width = 7, height = 5)
+svg("figures/bgc_violin_barplot.svg", width = 7, height = 5)
 barplot_violin
 dev.off()
 
@@ -171,7 +184,7 @@ dev.off()
   g3 = barplot_violin
 }
 
-svg("bgc_combined_barplot_bigtext.svg", width = 11, height = 7)
+svg("figures/bgc_combined_barplot_bigtext.svg", width = 11, height = 7)
 theme_set(theme_minimal())
 plot_grid(plot_grid(
   g1 + theme(legend.position = "none"), ggplot(), g3 + theme(legend.position = "none"), get_legend(g3),

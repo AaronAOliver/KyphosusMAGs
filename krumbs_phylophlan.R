@@ -153,7 +153,7 @@ figure = figure %<+% all_bins_tax +
 
 figure
 
-svg("final_figure.svg", width = 8, height = 8)
+svg("figures/final_figure.svg", width = 8, height = 8)
 figure
 dev.off()
 
