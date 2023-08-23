@@ -13,7 +13,7 @@ if (!require('reshape2')) install.packages('reshape2'); library('reshape2')
 
 # Read data from file
 data <- read.csv("data/read_taxonomy.tab", stringsAsFactors = FALSE, sep="\t")
-sample_order = c("R1_6", "R1_12", "R1_24", "R1_25", "R1_28", "R1_29", "R1_38", "R1_43", "R2_8", "R2_24", "R2_26",
+sample_order = c("R1_6", "R1_12", "R1_24", "R1_25", "R1_28", "R1_29", "R1_38", "R1_43", "R2_8", "R2_24", "R2_26", "Empty",
                  "F5GI_2", "F5GI_3", "F5HG_2", "F5HG_3", "F6GI_3", "F6GI_4", "F6HG_2", "F6HG_3",
                  "F7GI_2", "F7GI_3", "F7HG_2", "F7HG_3", "F8GI_2", "F8GI_3", "F8HG_2", "F8HG_3")
 data$id = factor(data$id, levels = sample_order)
@@ -47,14 +47,31 @@ data_pivoted <- data %>%
   select(id, source, taxon, abundance)
 
 data_pivoted$taxon = factor(data_pivoted$taxon, levels = taxa_order)
-data_pivoted_A = data_pivoted[data_pivoted$source == "A",]
+data_pivoted_A = data_pivoted[data_pivoted$source == "grey" | data_pivoted$source == "lightblue" | data_pivoted$source == "white" ,]
 data_pivoted_B = data_pivoted[data_pivoted$source == "B",]
 
 plot_A = ggplot(data_pivoted_A, aes(x = id, y = abundance, fill = taxon)) +
   geom_bar(stat = "identity", position = "stack") +
   scale_y_continuous(labels = scales::percent_format()) +
-  labs(x = "Sample", y = "Rel. Abundance", fill = "Read Taxonomy") + scale_fill_manual(labels = 
+  labs(x = "Sample", y = "Taxonomy of Assigned Reads", fill = "Read Taxonomy") + scale_fill_manual(labels = 
                                                                                              rev(c("Eukaryota", "Alphaproteobacteria", "Bacillota", "Bacteroidota", "Desulfovibrionales", "Fibrobacterota",
+                                                                                                   "Fusobacteriota",  "Gammaproteobacteria", "Spirochaetota", "Verrucomicrobiota", 
+                                                                                                   "WOR-3", "Other Taxa")), values = 
+                                                                                             rev(c( color_euk,  color_alpha,  color_firm,  color_bacteroid,
+                                                                                                    color_desulfo,   
+                                                                                                    color_fibro, color_fuso, color_gamma, color_spiro,
+                                                                                                    color_pvc, color_weird, color_other))) +
+  theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+                     panel.background = element_blank(), axis.line = element_line(colour = "black")) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, color = c("red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "white", "blue", "blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue")))  +  guides(fill = guide_legend(reverse = TRUE))
+
+
+
+plot_B = ggplot(data_pivoted_B, aes(x = id, y = abundance, fill = taxon)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(x = "Sample", y = "Taxonomic Assessment of Reads", fill = "Read Taxonomy") + scale_fill_manual(labels = 
+                                                                                            rev(c("Eukaryota", "Alphaproteobacteria", "Bacillota", "Bacteroidota", "Desulfovibrionales", "Fibrobacterota",
                                                                                                    "Fusobacteriota",  "Gammaproteobacteria", "Spirochaetota", "Verrucomicrobiota", 
                                                                                                    "WOR-3", "Other Taxa")), values = 
                                                                                              rev(c( color_euk,  color_alpha,  color_firm,  color_bacteroid,
@@ -65,20 +82,9 @@ plot_A = ggplot(data_pivoted_A, aes(x = id, y = abundance, fill = taxon)) +
                      panel.background = element_blank(), axis.line = element_line(colour = "black")) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))  +  guides(fill = guide_legend(reverse = TRUE))
 
-plot_B = ggplot(data_pivoted_B, aes(x = id, y = abundance, fill = taxon)) +
-  geom_bar(stat = "identity", position = "stack") +
-  scale_y_continuous(labels = scales::percent_format()) +
-  labs(x = "Sample", y = "Rel. Abundance", fill = "Read Taxonomy") + scale_fill_manual(labels = 
-                                                                                             rev(c("Eukaryota", "Alphaproteobacteria", "Bacillota", "Bacteroidota", "Desulfovibrionales", "Fibrobacterota",
-                                                                                                   "Fusobacteriota",  "Gammaproteobacteria", "Spirochaetota", "Verrucomicrobiota", 
-                                                                                                   "WOR-3", "Other Taxa")), values = 
-                                                                                             rev(c( color_euk,  color_alpha,  color_firm,  color_bacteroid,
-                                                                                                    color_desulfo,   
-                                                                                                    color_fibro, color_fuso, color_gamma, color_spiro,
-                                                                                                    color_pvc, color_weird, color_other))) +
-  theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-                     panel.background = element_blank(), axis.line = element_line(colour = "black")) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))  +  guides(fill = guide_legend(reverse = TRUE))
+svg("figures/read_taxonomy.svg", width = 7, height = 5)
+plot_A
+dev.off()
 
 svg("read_taxonomy.svg", width = 7, height = 5)
 # Create the barplot
