@@ -47,7 +47,7 @@ sulf_summary$blast = "nr_id"
 
 svg("figures/sulf_boxplot.svg",width = 8, height = 4)
 p <- ggplot(df_sulf_pivot, aes(annot, id, fill=blast))
-p + geom_boxplot() + theme_bw() + scale_fill_discrete(labels=c('Kyphosid Gut', 'Genbank nr', 'SulfAtlas')) + guides(fill= guide_legend(title = "Database"))  +  xlab("Sulfatase Subfamily") + 
+p + geom_boxplot() + theme_bw() + scale_fill_manual(values=c("skyblue", "#888888", "white"), labels = c("This Study", "GenBank nr", "SulfAtlas")) + guides(fill= guide_legend(title = "Database"))  +  xlab("Sulfatase Subfamily") + 
   ylab("Percent Identity") + theme(axis.text.x = element_text(size = 11, color = "black", angle = 90, vjust = 0.5, hjust=1), axis.text.y = element_text(size = 11, color = "black")) + ylim(20, 105) + 
   geom_text(data = sulf_summary,
             aes(annot, Inf, label = n), vjust = 1.5)
@@ -70,8 +70,8 @@ cazy_summary$blast = "nr_id"
 
 svg("figures/cazy_boxplot.svg", width = 8, height = 4)
 p <- ggplot(df_cazy_pivot, aes(annot, id, fill=blast))
-p + geom_boxplot() + theme_bw() + scale_fill_discrete(labels=c('Kyphosid Gut', 'Genbank nr', 'CAZy db')) + guides(fill= guide_legend(title = "Database"))  +  xlab("CAZyme Class") + 
-  ylab("Percent Identity")+ theme(axis.text.x = element_text(size = 11, color = cazy_colors,angle = 90, vjust = 0.5, hjust=1), axis.text.y = element_text(size = 11, color = "black")) + ylim(20, 105) +
+p + geom_boxplot() + theme_bw() + scale_fill_manual(values=c("skyblue", "#888888", "white"), labels = c("This Study", "GenBank nr", "CAZy db")) + guides(fill= guide_legend(title = "Database"))  +  xlab("CAZyme Class") + 
+  ylab("Percent Identity")+ theme(axis.text.x = element_text(size = 11, angle = 90, vjust = 0.5, hjust=1), axis.text.y = element_text(size = 11, color = "black")) + ylim(20, 105) +
   geom_text(data = cazy_summary,
             aes(annot, Inf, label = n), vjust = 1.5)
 dev.off()

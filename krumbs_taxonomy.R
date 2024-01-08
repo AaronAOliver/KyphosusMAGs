@@ -23,18 +23,16 @@ taxa_order = rev(c("Eukaryota", "Alphaproteobacteria", "Bacillota", "Bacteroidot
                  "WOR.3", "Other.Taxa"))
 
 {
-color_alpha = "#004949"
-color_gamma = "#490092"
-color_bacteroid = "#006DDB"
-color_desulfo = "#22CF22"
-color_pvc = "#b66dff"
-color_spiro = "#ffdf4d"
-color_fuso = "#009999"
-color_firm = "#920000"
-color_fibro = "#252525"
-color_weird = "#db6d00"
-color_euk = "#696969"
-color_other = "#D3D3D3"
+  color_alpha = "#006F6C"
+  color_gamma = "#8453b5"
+  color_bacteroid = "#006DDB"
+  color_desulfo = "#22CF22"
+  color_pvc = "#d5b2f7"
+  color_spiro = "#ffdf4d"
+  color_fuso = "#A7EAF7"
+  color_firm = "#BC0000"
+  color_fibro = "#252525"
+  color_weird = "#db6d00"
 }
 
 # Pivot data using tidyverse
@@ -47,7 +45,7 @@ data_pivoted <- data %>%
   select(id, source, taxon, abundance)
 
 data_pivoted$taxon = factor(data_pivoted$taxon, levels = taxa_order)
-data_pivoted_A = data_pivoted[data_pivoted$source == "grey" | data_pivoted$source == "lightblue" | data_pivoted$source == "white" ,]
+data_pivoted_A = data_pivoted[data_pivoted$source == "A" | data_pivoted$source == "white",]
 data_pivoted_B = data_pivoted[data_pivoted$source == "B",]
 
 plot_A = ggplot(data_pivoted_A, aes(x = id, y = abundance, fill = taxon)) +
@@ -56,15 +54,15 @@ plot_A = ggplot(data_pivoted_A, aes(x = id, y = abundance, fill = taxon)) +
   labs(x = "Sample", y = "Taxonomy of Assigned Reads", fill = "Read Taxonomy") + scale_fill_manual(labels = 
                                                                                              rev(c("Eukaryota", "Alphaproteobacteria", "Bacillota", "Bacteroidota", "Desulfovibrionales", "Fibrobacterota",
                                                                                                    "Fusobacteriota",  "Gammaproteobacteria", "Spirochaetota", "Verrucomicrobiota", 
-                                                                                                   "WOR-3", "Other Taxa")), values = 
+                                                                                                   "WOR-3", "Unbinned Taxa")), values = 
                                                                                              rev(c( color_euk,  color_alpha,  color_firm,  color_bacteroid,
                                                                                                     color_desulfo,   
                                                                                                     color_fibro, color_fuso, color_gamma, color_spiro,
                                                                                                     color_pvc, color_weird, color_other))) +
   theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                      panel.background = element_blank(), axis.line = element_line(colour = "black")) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, color = c("red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "white", "blue", "blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue")))  +  guides(fill = guide_legend(reverse = TRUE))
-
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, color = "black"))  +  guides(fill = guide_legend(reverse = TRUE))
+plot_A
 
 
 plot_B = ggplot(data_pivoted_B, aes(x = id, y = abundance, fill = taxon)) +
@@ -81,8 +79,10 @@ plot_B = ggplot(data_pivoted_B, aes(x = id, y = abundance, fill = taxon)) +
   theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                      panel.background = element_blank(), axis.line = element_line(colour = "black")) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))  +  guides(fill = guide_legend(reverse = TRUE))
+plot_B
 
-svg("figures/read_taxonomy.svg", width = 7, height = 5)
+
+svg("figures/read_taxonomy.svg", width = 8, height = 6)
 plot_A
 dev.off()
 
@@ -193,7 +193,7 @@ svg("bin_count.svg", width = 8, height = 4.5)
 ggplot(data_long, aes(fill=quality, y=bins, x=id)) + 
   geom_bar(position="stack", stat="identity") + labs(x = "Sample", y = "Number of MAGs", fill = "MAG Quality") +
   scale_fill_manual(labels = 
-                      c("High Quality", "Medium Quality"), values = c("Orange", "skyBlue")
+                      c("High Quality", "Medium Quality"), values = c("#848884", "#C0C0C0")
                       ) +
   
   theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),

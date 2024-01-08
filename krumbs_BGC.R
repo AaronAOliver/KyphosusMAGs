@@ -44,10 +44,10 @@ my_palettes <- c("Greens",
                  "Blues",
                  "Greys")
 
-get_random_color <- Vectorize(function(class){
-  hue <- my_colors[as.numeric(class)]
-  palette  <- brewer.pal(n=9, name = hue)
-  sample(palette, 1)})
+#get_random_color <- Vectorize(function(class){
+#  hue <- my_colors[as.numeric(class)]
+#  palette  <- brewer.pal(n=9, name = hue)
+#  sample(palette, 1)})
 
 {
   bgc_df = subset(as.data.frame(read.csv("data/bin_bgc.tab", sep = "\t")), select = c("longBGC", "class", "product")) %>% 
@@ -74,9 +74,9 @@ get_random_color <- Vectorize(function(class){
                         fill = product,
                         label = label)) +
     geom_bar(aes( y = n), 
-             position = "stack", stat ="identity") +
+             position = "stack", stat ="identity", fill = "white", color = "black") +
     geom_text(aes(y = label_position),
-              size = 3.5,
+              size = 3.4,
               color = "black") +
     facet_grid( . ~ class, space = "free", switch="x") +
     scale_fill_manual(values = bgc_df$color) +
@@ -99,14 +99,14 @@ dev.off()
 #####
 
 {
-  color_alpha = "#004949"
-  color_gamma = "#490092"
+  color_alpha = "#006F6C"
+  color_gamma = "#8453b5"
   color_bacteroid = "#006DDB"
   color_desulfo = "#22CF22"
-  color_pvc = "#b66dff"
+  color_pvc = "#d5b2f7"
   color_spiro = "#ffdf4d"
-  color_fuso = "#009999"
-  color_firm = "#920000"
+  color_fuso = "#A7EAF7"
+  color_firm = "#BC0000"
   color_fibro = "#252525"
   color_weird = "#db6d00"
   
@@ -139,6 +139,8 @@ dev.off()
     group_by(class, taxonomy) %>%
     arrange(class, desc(n))
   
+  bgc_tax_df = aggregate(n ~ class + taxonomy, bgc_tax_df, sum)
+  
   bgc_tax_df <- merge(x=bgc_tax_df,y=annotation_pairs, 
                       by="taxonomy", all.x=TRUE)
   
@@ -168,10 +170,12 @@ bgc_violin_df = subset(as.data.frame(read.csv("data/bin_bgc.tab", sep = "\t")), 
          class = factor(class, levels = unique(my_classes)))
 barplot_violin = ggplot(bgc_violin_df, aes(x=class, y=distance)) +
   geom_quasirandom(aes(x=class, y=distance, fill = completeness), shape = 21, size = 2, color = "transparent", dodge.width = 0.3, varwidth = TRUE) +
+  scale_fill_manual(values = c("Complete" = "#848884", "Fragmented" = "#C0C0C0"))  +
   theme_minimal() + 
   geom_hline(yintercept=900, linetype='dotted', col = 'red') +
   ylab("Distance to Nearest GCF") + xlab("") + theme(axis.text=element_text(size=12, colour = "black"))
 barplot_violin$labels$fill <- "BGC Quality"
+barplot_violin
 
 svg("figures/bgc_violin_barplot.svg", width = 7, height = 5)
 barplot_violin
